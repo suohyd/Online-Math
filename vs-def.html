@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-31T10:10:39+05:30       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Definition of a vector space</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\End{\mathrm{End}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="Linear-Algebra.html"><span class="title">Linear Algebra:</span> <span class="subtitle">An Introduction</span></a></h1>
+<p class="byline">A. Soman</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="VS.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="vs-examples.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="VS.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><a class="next-button button toolbar-item" href="vs-examples.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="preface-1.html" data-scroll="preface-1"><span class="title">Preface</span></a></li>
+<li class="link">
+<a href="Elt-row-operations.html" data-scroll="Elt-row-operations"><span class="codenumber">1</span> <span class="title">Elementary row operations</span></a><ul><li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li></ul>
+</li>
+<li class="link">
+<a href="VS.html" data-scroll="VS"><span class="codenumber">2</span> <span class="title">Vector spaces</span></a><ul>
+<li><a href="vs-def.html" data-scroll="vs-def" class="active">Definition of a vector space</a></li>
+<li><a href="vs-examples.html" data-scroll="vs-examples">Examples of vector spaces</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="vs-def"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Definition of a vector space</span>
+</h2>
+<p id="p-5">Let \(V\) be an <em class="emphasis">abelian group</em>. We write the binary operation on \(V\) additively. Recall then that we have the following properties:</p>
+<ol class="decimal">
+<li id="li-6">For \(v,w\in V\text{,}\) \(v+w=w+v\text{.}\)</li>
+<li id="li-7">For \(v,w,z\in V\text{,}\) \(v+(w+z)=(v+w)+z\text{.}\)</li>
+<li id="li-8">There exists a unique element \(0\in V\) such that for any \(v\in V\text{,}\) \(0+v=v+0=v\text{.}\)</li>
+<li id="li-9">For every \(v\in V\) there exists a unique element (which is denoted by \(-v\)) such that \(v+(-v)=(-v)+v=0\text{.}\)</li>
+</ol>
+<p id="p-6">Now we give the definition of a vector space over a field. <article class="definition definition-like" id="definition-1"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h6>Let \(F\) be a field and let \(V\) be an abelian group. We call \(V\) a <em class="emphasis">vector space over \(F\)</em> or <em class="emphasis">an \(F\)-vector space</em> if there is a map, called <em class="emphasis">scalar multiplication</em><div class="displaymath">
+\begin{equation*}
+F\times V\to V
+\end{equation*}
+</div>satisfying the following conditions. First, for a given \(\alpha\in F\) and \(v\in V\text{,}\) let us denote the image of \((\alpha,v)\) under this map simply by \(\alpha\cdot v\text{.}\) <ol class="decimal">
+<li id="li-10">Let \(1\) be the unity in \(F\text{.}\) Then,<div class="displaymath">
+\begin{equation*}
+1\cdot v= v
+\end{equation*}
+</div>for every \(v\in V\text{.}\)</li>
+<li id="li-11">For \(\alpha,\beta\in F\) and \(v\in V\text{,}\) we have<div class="displaymath">
+\begin{equation*}
+(\alpha\beta)\cdot v=\alpha\cdot(\beta\cdot v).
+\end{equation*}
+</div>
+</li>
+<li id="li-12">For \(\alpha\in F\) and \(v,w\in V\) we have<div class="displaymath">
+\begin{equation*}
+\alpha\cdot(v+w)=\alpha\cdot v+\alpha\cdot w.
+\end{equation*}
+</div>
+</li>
+<li id="li-13">For \(\alpha,\beta\in F\) and \(v\in V\text{,}\) we have<div class="displaymath">
+\begin{equation*}
+(\alpha+\beta)\cdot v=\alpha\cdot v+\beta\cdot v.
+\end{equation*}
+</div>
+</li>
+</ol> The elements of \(F\) are called <em class="emphasis">scalars</em> and elements of \(V\) are called <em class="emphasis">vectors</em>.</article> <article class="remark remark-like" id="remark-1"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h6>Please try not to confuse the terminology of a vector that you have studied in 12th, viz., a vector is something that has a 'length', 'base', and it is denoted by an arrow, etc.. The definition above is what we will use throughout!</article></p>
+<article class="example example-like" id="example-1"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like">Let \(\R\) be the field of real numbers. Consider \(\R^2=\{(x,y):x,y\in\R\}\text{.}\) The componentwise addition turns \(\R^2\) into an abelian group. We define a scalar multiplication as follows:<div class="displaymath">
+\begin{equation*}
+\alpha\cdot(x,y)=(\alpha x,\alpha y),
+\end{equation*}
+</div>where \(\alpha,x,y\in\R\text{.}\) Note that \(\alpha x\) (resp., \(\alpha y\)) is the usual multiplication in \(\R\text{,}\) while \(\alpha\cdot(x,y)\) is the <em class="emphasis">scalar multiplication</em>. Check that \(\R^2\) is a vector space over \(\R\text{.}\) <p id="p-7">If we fix \((1,1)\in\R^2\) then, for given \(\alpha\in\R\) we get</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha\cdot(1,1)=(\alpha,\alpha).
+\end{equation*}
+</div>
+<p class="continuation">In this way, we may say that \(\R\) sits inside \(\R^2\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="exercise-6"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-6"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like">Let \(n\in\N\text{.}\) Consider \(\R^n=\{(x_1,x_2,\ldots,x_n):x_i\in\R\}\text{.}\) Show that \(\R^n\) is a vector space over \(\R\text{.}\)</article></div></section></div></main>
+</div>
+</body>
+</html>
