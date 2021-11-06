@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Vector spaces</title>
+<title>Linear combination</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>window.MathJax = {
@@ -70,10 +70,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Elt-row-operations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Linear-Algebra.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="vs-def.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Ex-VS.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subspace.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Elt-row-operations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Linear-Algebra.html" title="Up">Up</a><a class="next-button button toolbar-item" href="vs-def.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Ex-VS.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subspace.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -83,29 +83,55 @@
 <li class="link">
 <a href="Elt-row-operations.html" data-scroll="Elt-row-operations"><span class="codenumber">1</span> <span class="title">Elementary row operations</span></a><ul><li><a href="exercises-elt-row-operations.html" data-scroll="exercises-elt-row-operations">Exercises</a></li></ul>
 </li>
-<li class="link active">
+<li class="link">
 <a href="VS.html" data-scroll="VS"><span class="codenumber">2</span> <span class="title">Vector spaces</span></a><ul>
 <li><a href="vs-def.html" data-scroll="vs-def">Definition of a vector space</a></li>
 <li><a href="vs-examples.html" data-scroll="vs-examples">Examples of vector spaces</a></li>
 <li><a href="Ex-VS.html" data-scroll="Ex-VS">Exercises</a></li>
-<li><a href="linear-combination.html" data-scroll="linear-combination">Linear combination</a></li>
+<li><a href="linear-combination.html" data-scroll="linear-combination" class="active">Linear combination</a></li>
 <li><a href="subspace.html" data-scroll="subspace">Subspace of a vector space</a></li>
 <li><a href="Ex-subspace.html" data-scroll="Ex-subspace">Exercises</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="VS"><h2 class="heading">
-<span class="type">Chapter</span> <span class="codenumber">2</span> <span class="title">Vector spaces</span>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="linear-combination"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Linear combination</span>
 </h2>
-<section class="introduction" id="introduction-2">In this chapter we give the definition of vector space over a field. This is a central concept for this course. As you will see, you have already encountered several examples of vector spaces.</section><nav class="summary-links"><ul>
-<li><a href="vs-def.html"><span class="codenumber">2.1</span> <span class="title">Definition of a vector space</span></a></li>
-<li><a href="vs-examples.html"><span class="codenumber">2.2</span> <span class="title">Examples of vector spaces</span></a></li>
-<li><a href="Ex-VS.html"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></li>
-<li><a href="linear-combination.html"><span class="codenumber">2.4</span> <span class="title">Linear combination</span></a></li>
-<li><a href="subspace.html"><span class="codenumber">2.5</span> <span class="title">Subspace of a vector space</span></a></li>
-<li><a href="Ex-subspace.html"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></li>
-</ul></nav></section></div></main>
+<section class="introduction" id="introduction-4">We define a linear combination of vectors in a vector space.</section><article class="definition definition-like" id="definition-2"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
+</h6>Let \(V\) be a vector space over a field \(F\text{.}\) A vector \(w\in V\) is said to be a <em class="emphasis">linear combination</em> of vectors \(v_1,v_2,\ldots,v_r\) in \(V\) if there are scalars \(\alpha_1,\alpha_2,\ldots,\alpha_r\in F\) such that<div class="displaymath">
+\begin{equation*}
+w=\alpha_1 v_1+\alpha_2 v_2+\cdots+\alpha_r v_r.
+\end{equation*}
+</div></article><article class="example example-like" id="example-7"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like">Consider \(\R^2\) as a vector space over \(\R\) (refer to <a class="xref" data-knowl="./knowl/n-dim-vs.html" title="Example 2.2.1: (\(n\)-dimensional vector space over a field)">Example 2.2.1</a>). A vector \((\alpha,0)\in\R^2\) is a linear combination of vector \((1,0)\) as well as a linear combination of vectors \((1,0)\) and \((0,1)\text{.}\) Indeed, we have<div class="displaymath">
+\begin{equation*}
+(\alpha,0)=\alpha(1,0)
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{equation*}
+(\alpha,0)=\alpha(1,0)+0(0,1).
+\end{equation*}
+</div></article></div>
+<article class="remark remark-like" id="remark-3"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
+</h6>If \(w,z\in V\) are such that<div class="displaymath">
+\begin{equation*}
+w=\sum_{i=1}^{r}\alpha_iv_i\quad\text{and}\quad z=\sum_{i=1}^{r}\beta_i v_i\quad\text{for }\alpha_i,\beta_i\in F\text{ and }v_i\in V
+\end{equation*}
+</div>then,<div class="displaymath">
+\begin{equation*}
+w+z=\sum_{i=1}^{r}(\alpha_i+\beta_i)v_i.
+\end{equation*}
+</div>Furthermore, for any \(\gamma\in F\)<div class="displaymath">
+\begin{equation*}
+\gamma w=\sum_{i=1}^{r}(\gamma\alpha_i) v_i\quad\text{and}\quad \gamma z=\sum_{i=1}^{r}(\gamma\beta_i)v_i.
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exercise-17"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-17"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-17"><article class="exercise exercise-like">What are all vectors in \(\R^2\) that can be written as linear combinations of vectors \((1,0)\) and \((0,1)\text{?}\) Think geometrically.</article></div></section></div></main>
 </div>
 </body>
 </html>
