@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Vector spaces</title>
+<title>Elementary row operations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>window.MathJax = {
@@ -70,20 +70,20 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Elt-row-operations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Linear-Algebra.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="vs-def.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="preface-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Linear-Algebra.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="VS.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Elt-row-operations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Linear-Algebra.html" title="Up">Up</a><a class="next-button button toolbar-item" href="vs-def.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="preface-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Linear-Algebra.html" title="Up">Up</a><a class="next-button button toolbar-item" href="VS.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
 <li class="link"><a href="preface-1.html" data-scroll="preface-1"><span class="title">Preface</span></a></li>
-<li class="link">
+<li class="link active">
 <a href="Elt-row-operations.html" data-scroll="Elt-row-operations"><span class="codenumber">1</span> <span class="title">Elementary row operations</span></a><ul><li><a href="exercises-elt-row-operations.html" data-scroll="exercises-elt-row-operations">Exercises</a></li></ul>
 </li>
-<li class="link active">
+<li class="link">
 <a href="VS.html" data-scroll="VS"><span class="codenumber">2</span> <span class="title">Vector spaces</span></a><ul>
 <li><a href="vs-def.html" data-scroll="vs-def">Definition of a vector space</a></li>
 <li><a href="vs-examples.html" data-scroll="vs-examples">Examples of vector spaces</a></li>
@@ -95,17 +95,31 @@
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="VS"><h2 class="heading">
-<span class="type">Chapter</span> <span class="codenumber">2</span> <span class="title">Vector spaces</span>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="Elt-row-operations"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">1</span> <span class="title">Elementary row operations</span>
 </h2>
-<section class="introduction" id="introduction-2"><p id="p-6">In this chapter we give the definition of vector space over a field. This is a central concept for this course. As you will see, you have already encountered several examples of vector spaces.</p></section><nav class="summary-links"><ul>
-<li><a href="vs-def.html"><span class="codenumber">2.1</span> <span class="title">Definition of a vector space</span></a></li>
-<li><a href="vs-examples.html"><span class="codenumber">2.2</span> <span class="title">Examples of vector spaces</span></a></li>
-<li><a href="Ex-VS.html"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></li>
-<li><a href="linear-combination.html"><span class="codenumber">2.4</span> <span class="title">Linear combination</span></a></li>
-<li><a href="subspace.html"><span class="codenumber">2.5</span> <span class="title">Subspace of a vector space</span></a></li>
-<li><a href="Ex-subspace.html"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></li>
-</ul></nav></section></div></main>
+<section class="introduction" id="introduction-1"><p id="p-2">In this preliminary section we state some results and give some exercises related to elementary row operations.</p></section><p id="p-3">Let \(F\) be a field. Let \(e\colon M_{n\times n}(F)\to M_{n\times n}(F)\) be an elementary row operation. Let \(I_n\) be the identity matrix. If \(e\) is the elementary row operation of the first type, i.e., multiplying the \(r\)-th row of \(I_n\) by a nonzero \(\alpha\in F\) then,</p>
+<div class="displaymath">
+\begin{equation*}
+e(I_n)={\rm diag}(1,1,\ldots,1,\alpha,1,1,\ldots,1).
+\end{equation*}
+</div>
+<p class="continuation">Given any \(n\times n\) matrix \(A\in M_{n\times n}(F)\) we get</p>
+<div class="displaymath">
+\begin{equation*}
+e(I_n)\cdot A=e(A).
+\end{equation*}
+</div>
+<p id="p-4">We also discussed <em class="emphasis">row reduced echelon form</em> of a matrix in the class. Please refere class notes for more details.</p>
+<section class="exercises" id="exercises-elt-row-operations"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<p id="p-5">Let \(e\colon M_{n\times n}(F)\to M_{n\times n}(F)\) be an elementary row operation (of any type).</p>
+<article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>Let \(A\in M_{n\times n}(F)\text{.}\) Show that<div class="displaymath">
+\begin{equation*}
+e(I_n)\cdot A=e(A).
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>Keep the notations of the above exercise. If we multiply \(A\) by \(e(I_n)\) on the right, i.e., if we consider the matrix \(A\cdot e(I_n)\) then, what matrix one gets? Relate this with "elementary column operations".</article><article class="exercise exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>Keep notations of the above exercise. Compute determinant of \(e(I_n)\) for each type of elementary row operations. Is \(e(I_n)\) invertible matrix? Justify your answer.</article><article class="exercise exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>Is "row-equivalence" an equivalence relation?</article><article class="exercise exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>Let \(A,B\in M_{m\times n}(F)\) be matrices over a field \(F\text{.}\) Assume that homogeneous systems of linear equations \(AX=0\) and \(BX=0\) have same solutions. Is it true that \(A\) and \(B\) are row-equivalent? [<em class="emphasis">Note that this was a question asked by one of the student.</em>]</article></section></section></div></main>
 </div>
 </body>
 </html>
