@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T22:07:12+05:30       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.3</span><span class="period">.</span><span class="space"> </span><span class="title">(A basis of solution space - general case).</span>
+</h6>
+<p>Let \(A\in M_{m\times n}(F)\) be a matrix and \(R\) be its row-reduced echelon form. Let \(\ker A\) be the subspace of solutions of \(AX=0\text{.}\) Then, \(\ker A\) is also the subspace of solutions of \(RX=0\text{.}\) Suppose that the leading nonzero entries of nonzero rows of \(R\) occur in columns \(k_1,k_2,\ldots,k_r\text{.}\) Let \(I=\{1,2,\ldots,n\}\setminus\{k_1,k_2,\ldots,k_r\}\text{.}\) Thus if \((x_1,x_2,\ldots,x_n)^t\in\ker A\) then, for \(\ell=1,2,\ldots,r\) and for some \(\alpha_{k_\ell}(i)\in F\) we get the following:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+x_{k_\ell}=\sum_{i\in I}\alpha_{k_\ell}(i)\,x_i\tag{3.1}
+\end{equation}
+</div>
+<p class="continuation">Solutions of \(RX=0\) can be obtained by assigning arbitrary values to \(x_i\) (\(i\in I\)) and then obtaining corresponding values for \(x_{k_\ell}\) (\(1\leq\ell\leq r\)). Consider for each \(i\in I\) vectors \(v_i\in\ker A\) obtained by putting \(1\) at the \(i\)-th place and \(0\) at \(j\)-th place for \(j\in I\setminus\{i\}\text{.}\) Therefore, \(k_\ell\)-th place of \(v_i\) will be \(\alpha_{k_\ell}(i)\in F\) for \(1\leq\ell\leq r.\) To summarize, for \(p\in\{1,2,\ldots,n\}\text{,}\) the \(p\)-th place of the vector \(v_i\) (\(i\in I\)) is given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+v_{ip}=\begin{cases}\delta_{ip}\amp p\in I\\\alpha_{p}(i)\amp p\in\{k_1,k_2,\ldots,k_r\}.\end{cases}
+\end{equation*}
+</div>
+<p>We claim that \(\{v_i\}_{i\in I}\) is linearly independent. Suppose that \(\sum_{i\in I}\beta_iv_i=0\text{.}\) We thus have \(\sum_{i\in I}\beta_iv_{ip}=0\text{.}\) Therefore, for \(p\in I\) we get \(\sum_{i\in I}\beta_i\delta_{ip}=0\) and thus \(\beta_p=0\text{.}\) Hence, the claim is proved.</p>
+<p>We now show that \(\{v_i\}_{i\in I}\) spans \(\ker A\text{.}\) Let \(s=(s_1,s_2,\ldots,s_n)^t\in\ker A\text{.}\) In particular, by eq. <a class="xref" data-knowl="./knowl/solution-space-general-eqn.html" title="Equation 3.1">(3.1)</a>, \(s_{k_\ell}=\sum_{i\in I}\alpha_{k_\ell}(i)s_i\text{.}\) Hence, we have \(s=\sum_{i\in I} s_iv_i\text{.}\)</p>
+<p>This also shows that \(\dim_F(\ker A)=n-r.\)</p></article><span class="incontext"><a href="sec-basis-examples.html#basis-of-homogeneous-solution-space">in-context</a></span>
+</body>
+</html>
