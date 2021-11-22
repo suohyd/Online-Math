@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T22:07:12+05:30       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="remark remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.6.9</span><span class="period">.</span>
+</h6>Let \(A\) be a matrix representation of a linear transformation \(S\colon V\to W\) with respect to bases \(\mathfrak{B}_V\) and \(\mathfrak{B}_W\text{.}\) By <a class="xref" data-knowl="./knowl/iso-to-n-dim-vs.html" title="Proposition 4.6.8">Proposition 4.6.8</a>, there are \(F\)-isomorphisms<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+T_{\mathfrak{B}_V}\colon V\xrightarrow{\sim} F^n\quad\text{and}\quad T_{\mathfrak{B}_W}\colon W\xrightarrow{\sim} F^m.
+\end{equation*}
+</div>By <a class="xref" data-knowl="./knowl/row-column-space-iso.html" title="Checkpoint 4.6.7">Checkpoint 4.6.7</a> we have \(F\)-isomorphisms<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+_nT\colon F^n\xrightarrow{\sim} M_{n\times 1}(F)\quad\text{and}\quad _mT\colon F^m\xrightarrow{\sim} M_{m\times 1}(F).
+\end{equation*}
+</div>Consider the following composition of maps.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+V\xrightarrow{T_{\mathfrak{B}_V}}F^n\xrightarrow{_nT}M_{n\times 1}(F)\xrightarrow{L_A}M_{m\times 1}(F)\xrightarrow{_mT^{-1}}F^{m}\xrightarrow{T_{\mathfrak{B}_W}^{-1}}W\tag{4.3}
+\end{equation}
+</div>The map \(L_A\) is the left multiplication by the matrix \(A\) (see <a class="xref" data-knowl="./knowl/induced-by-matrix.html" title="Example 4.2.2: (Linear transformation induced by a matrix)">Example 4.2.2</a>). The composition above is denoted by \(\ell_A\text{.}\) Thus,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\ell_A=T_{\mathfrak{B}_W}^{-1}\circ{} _mT^{-1}\circ L_A\circ{} _nT\circ T_{\mathfrak{B}_V}.
+\end{equation*}
+</div>By eq. <a class="xref" data-knowl="./knowl/matrix-rep-coordinates.html" title="Equation 4.2">(4.2)</a> it follows that the given linear transformation \(S\) is the same as the composition transformation given in eq. <a class="xref" data-knowl="./knowl/composition.html" title="Equation 4.3">(4.3)</a>.</article><span class="incontext"><a href="sec-isomorphisms.html#remark-19">in-context</a></span>
+</body>
+</html>
