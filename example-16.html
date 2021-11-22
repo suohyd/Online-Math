@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-15T20:36:08+05:30       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">(A basis of solution space - particular case).</span>
+</h6>
+<p>Consider the matrix over \(\Q\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+A=\begin{pmatrix}1\amp 1\amp 1\\1\amp 1\amp 1\\1\amp 1\amp 1\end{pmatrix}.
+\end{equation*}
+</div>
+<p class="continuation">Its row-reduced echelon form is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+R=\begin{pmatrix}1\amp 1\amp 1\\0\amp 0\amp 0\\0\amp 0\amp 0\end{pmatrix}.
+\end{equation*}
+</div>
+<p class="continuation">We want to find a basis for the solution space of \(AX=0\text{.}\) In <a href="Elt-row-operations.html" class="internal" title="Chapter 1: Elementary row operations">Chapter 1</a> we saw that the solution space of the system \(AX=0\) and the system \(RX=0\) is same. So, we work with the matrix \(R\text{.}\)</p>
+<p>Only the first row of \(R\) is nonzero and the leading term occurs in the first column. We have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_1+x_2+x_3=0.
+\end{equation*}
+</div>
+<p class="continuation">Solutions of the system \(RX=0\) are obtained by assigning arbitrary values to \(x_2,x_3\) and then computing the corresponding value for \(x_1\text{.}\) Consider the vectors \(v=(-1,1,0)^t\) and \(w=(-1,0,1)^t\text{.}\) We claim that \(\{v,w\}\) forms a basis for the space of solutions of \(RX=0\text{.}\) It is easy to see that \(\{v,w\}\) is linearly independent.</p>
+<p>Now suppose that \((s_1,s_2,s_3)^t\) is a solution of \(RX=0\text{.}\) Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+s_2\cdot v+s_3\cdot w=(-s_2-s_3,s_2,s_3)^t
+\end{equation*}
+</div>
+<p class="continuation">is also a solution of \(RX=0\text{.}\) Moreover, as \(s_1=-s_2-s_3\) we get that \((s_1,s_2,s_3)^t\) is a linear combination of \(v,w\text{.}\) Hence, \(\{v,w\}\) spans the space of solutions of \(RX=0\text{.}\)</p></article><span class="incontext"><a href="sec-basis-examples.html#example-16">in-context</a></span>
+</body>
+</html>
