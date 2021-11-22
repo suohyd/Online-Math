@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-22T22:07:11+05:30       *-->
+<!--*       on 2021-11-08T11:50:14+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Preface</title>
+<title>Basis and dimension of a vector space</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>window.MathJax = {
@@ -55,15 +55,9 @@
 \def\Q{\mathbb{Q}}
 \def\N{\mathbb{N}}
 \def\Z{\mathbb{Z}}
-\def\GL{\mathrm{GL}}
 \def\End{\mathrm{End}}
-\def\Aut{\mathrm{Aut}}
-\def\Hom{\mathrm{Hom}}
-\def\Iso{\mathrm{Iso}}
 \def\GL{\mathrm{GL}}
 \def\ker{\mathrm{ker}}
-\def\Span{\mathrm{Span}}
-\def\tr{\mathrm{tr}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -76,10 +70,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="colophon-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="frontmatter-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Elt-row-operations.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Bases-Dim.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Bases-Dim.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="colophon-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="frontmatter-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Elt-row-operations.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Bases-Dim.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Bases-Dim.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -87,7 +81,7 @@
 <li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1" class="active">Preface</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
 </li>
 <li class="link">
@@ -107,39 +101,35 @@
 </ul>
 </li>
 <li class="link">
-<a href="ch-Basis-Dim.html" data-scroll="ch-Basis-Dim"><span class="codenumber">3</span> <span class="title">Basis and dimension of a vector space</span></a><ul>
-<li><a href="sec-linear-dependence.html" data-scroll="sec-linear-dependence">Linearly independent vectors</a></li>
-<li><a href="ex-linear-dependence.html" data-scroll="ex-linear-dependence">Exercises</a></li>
-<li><a href="sec-basis-dim.html" data-scroll="sec-basis-dim">Basis and Dimension</a></li>
-<li><a href="sec-results-basis-dim.html" data-scroll="sec-results-basis-dim">Invariance of dimension</a></li>
-<li><a href="ex-basis-dim.html" data-scroll="ex-basis-dim">Exercises</a></li>
-<li><a href="sec-basis-examples.html" data-scroll="sec-basis-examples">Examples</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="ch-linear-transformations.html" data-scroll="ch-linear-transformations"><span class="codenumber">4</span> <span class="title">Linear transformations</span></a><ul>
-<li><a href="sec-def-linear-transformation.html" data-scroll="sec-def-linear-transformation">Definition of linear transformation</a></li>
-<li><a href="sec-examples-linear-transformations.html" data-scroll="sec-examples-linear-transformations">Examples of linear transformations</a></li>
-<li><a href="ex-lin-trans.html" data-scroll="ex-lin-trans">Exercises</a></li>
-<li><a href="sec-ordered-basis-linear-trans.html" data-scroll="sec-ordered-basis-linear-trans">Ordered basis and linear maps</a></li>
-<li><a href="ex-ordered-basis.html" data-scroll="ex-ordered-basis">Exercises</a></li>
-<li><a href="sec-isomorphisms.html" data-scroll="sec-isomorphisms">Isomorphisms</a></li>
-<li><a href="sec-isomorphism-invertible-matrix.html" data-scroll="sec-isomorphism-invertible-matrix">Isomorphism and invertible matrix</a></li>
-</ul>
+<a href="Bases-Dim.html" data-scroll="Bases-Dim"><span class="codenumber">3</span> <span class="title">Basis and dimension of a vector space</span></a><ul><li><a href="linear-dependence.html" data-scroll="linear-dependence" class="active">Basis and dimension of a vector space</a></li></ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="preface" id="preface-1"><h2 class="heading hide-type">
-<span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Preface</span>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="linear-dependence"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Basis and dimension of a vector space</span>
 </h2>
-<p id="p-1">These notes are companion to lectures, and is a work in progress. All results are standard and can be found in various references listed below.</p>
-<ol class="decimal">
-<li id="li-1"><p id="p-derived-li-1">"Linear Algebra" by Hoffman and Kunze.</p></li>
-<li id="li-2"><p id="p-derived-li-2">"Linear Algebra: A Geometric Approach" by Kumaresan.</p></li>
-<li id="li-3"><p id="p-derived-li-3">"Linear Algebra" by Insel, Spence, and Friedberg.</p></li>
-<li id="li-4"><p id="p-derived-li-4">"Algebra" by Artin.</p></li>
-<li id="li-5"><p id="p-derived-li-5">Linear/Multilinear Algebra section in K. Conrad's <a class="external" href="https://kconrad.math.uconn.edu/blurbs/" target="_blank">webpage</a>.</p></li>
-</ol></section></div></main>
+<section class="introduction" id="introduction-7">We first define <em class="emphasis">linear independence</em> of vectors and use it to define <em class="emphasis">basis</em> of a vector space. We begin with the following.</section><article class="definition definition-like" id="linearly-dependent"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">(Linearly dependent vectors).</span>
+</h6>
+<p id="p-15">Let \(V\) be a vector space over a field \(F\text{.}\) A set of vectors \(\{v_1,v_2,\ldots,v_n\}\subset V\) is said to be <dfn class="terminology">linearly dependent</dfn> over \(F\) if there exists scalars \(\alpha_1,\alpha_2,\ldots,\alpha_n\in F\) not all zero such that</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha_1 v_1+\alpha_2 v_2+\cdots+\alpha_n v_n=0.
+\end{equation*}
+</div>
+<p id="p-16">An infinite subset \(S\) of \(V\) is said to be <dfn class="terminology">linearly dependent</dfn> over \(F\) if there is a finite subset of \(S\) which is linearly dependent over \(F\text{.}\)</p></article><article class="definition definition-like" id="linearly-independent"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">(Linearly independent vectors).</span>
+</h6> A set \(S\) of vectors in \(V\) are said to be <dfn class="terminology">linearly independent</dfn> over \(F\) if \(S\) is not linearly dependent over \(F\text{.}\)</article><article class="remark remark-like" id="remark-5"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
+</h6>A set \(S\) of vectors is linearly independent if and only if each finite subset of \(S\) is linearly independent.</article><article class="definition definition-like" id="def-basis"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">(Basis of a vector space).</span>
+</h6>Let \(V\) be a vector space over a field \(F\text{.}\) A <dfn class="terminology">basis</dfn> of \(V\) over \(F\) is a set of linearly independent vectors in \(V\) which spans \(V\) (refer to <a class="xref" data-knowl="./knowl/vs-spanned-by.html" title="Definition 2.5.13">Definition 2.5.13</a>).</article><p id="p-17">Now we define the dimension of a vector space.</p>
+<article class="definition definition-like" id="def-dim"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">(Dimension of a vector space).</span>
+</h6>
+<p id="p-18">Let \(V\) be a vector space over a field \(F\text{.}\) The cardinality of a basis of \(V\) is called the <dfn class="terminology">dimension</dfn> of \(V\text{.}\) It is denoted by \(\dim_F V\text{.}\)</p>
+<p id="p-19">If \(\dim_F V\) is finite then, \(V\) is said to be a <dfn class="terminology">finite-dimensional</dfn> vector space over \(F\) or if the context is clear then simply <dfn class="terminology">finite-dimensional</dfn>.</p>
+<p id="p-20">If \(\dim_F V\) is infinite then, \(V\) is said to be an <dfn class="terminology">infinite dimensional</dfn> vector space over \(F\) or if the context is clear then simply <dfn class="terminology">infinite dimensional</dfn>.</p></article></section></div></main>
 </div>
 </body>
 </html>

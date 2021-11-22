@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-07T10:23:55+05:30       *-->
+<!--*       on 2021-11-22T22:07:11+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -55,9 +55,15 @@
 \def\Q{\mathbb{Q}}
 \def\N{\mathbb{N}}
 \def\Z{\mathbb{Z}}
+\def\GL{\mathrm{GL}}
 \def\End{\mathrm{End}}
+\def\Aut{\mathrm{Aut}}
+\def\Hom{\mathrm{Hom}}
+\def\Iso{\mathrm{Iso}}
 \def\GL{\mathrm{GL}}
 \def\ker{\mathrm{ker}}
+\def\Span{\mathrm{Span}}
+\def\tr{\mathrm{tr}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -70,18 +76,25 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subspace.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subspace.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-Basis-Dim.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subspace.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subspace.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch-Basis-Dim.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
-<li class="link"><a href="preface-1.html" data-scroll="preface-1"><span class="title">Preface</span></a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
 <li class="link">
-<a href="Elt-row-operations.html" data-scroll="Elt-row-operations"><span class="codenumber">1</span> <span class="title">Elementary row operations</span></a><ul><li><a href="exercises-elt-row-operations.html" data-scroll="exercises-elt-row-operations">Exercises</a></li></ul>
+<a href="Elt-row-operations.html" data-scroll="Elt-row-operations"><span class="codenumber">1</span> <span class="title">Elementary row operations</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1">Elementary row operations</a></li>
+<li><a href="Elt-row-exercises.html" data-scroll="Elt-row-exercises">Exercises</a></li>
+</ul>
 </li>
 <li class="link">
 <a href="VS.html" data-scroll="VS"><span class="codenumber">2</span> <span class="title">Vector spaces</span></a><ul>
@@ -93,16 +106,39 @@
 <li><a href="Ex-subspace.html" data-scroll="Ex-subspace" class="active">Exercises</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="ch-Basis-Dim.html" data-scroll="ch-Basis-Dim"><span class="codenumber">3</span> <span class="title">Basis and dimension of a vector space</span></a><ul>
+<li><a href="sec-linear-dependence.html" data-scroll="sec-linear-dependence">Linearly independent vectors</a></li>
+<li><a href="ex-linear-dependence.html" data-scroll="ex-linear-dependence">Exercises</a></li>
+<li><a href="sec-basis-dim.html" data-scroll="sec-basis-dim">Basis and Dimension</a></li>
+<li><a href="sec-results-basis-dim.html" data-scroll="sec-results-basis-dim">Invariance of dimension</a></li>
+<li><a href="ex-basis-dim.html" data-scroll="ex-basis-dim">Exercises</a></li>
+<li><a href="sec-basis-examples.html" data-scroll="sec-basis-examples">Examples</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-linear-transformations.html" data-scroll="ch-linear-transformations"><span class="codenumber">4</span> <span class="title">Linear transformations</span></a><ul>
+<li><a href="sec-def-linear-transformation.html" data-scroll="sec-def-linear-transformation">Definition of linear transformation</a></li>
+<li><a href="sec-examples-linear-transformations.html" data-scroll="sec-examples-linear-transformations">Examples of linear transformations</a></li>
+<li><a href="ex-lin-trans.html" data-scroll="ex-lin-trans">Exercises</a></li>
+<li><a href="sec-ordered-basis-linear-trans.html" data-scroll="sec-ordered-basis-linear-trans">Ordered basis and linear maps</a></li>
+<li><a href="ex-ordered-basis.html" data-scroll="ex-ordered-basis">Exercises</a></li>
+<li><a href="sec-isomorphisms.html" data-scroll="sec-isomorphisms">Isomorphisms</a></li>
+<li><a href="sec-isomorphism-invertible-matrix.html" data-scroll="sec-isomorphism-invertible-matrix">Isomorphism and invertible matrix</a></li>
+</ul>
+</li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="exercises" id="Ex-subspace"><h2 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.6</span> <span class="title">Exercises</span>
 </h2>
-<article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>Let \(\ell\) be a line passing through the origin in \(\R^2\text{.}\) Determine for which vectors \(v\in\R^2\text{,}\) the subset \(v+\ell=\{v+x:x\in\ell\}\) is a subspace of \(\R^2\text{.}\) Think geometrically.</article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>Find all subspaces in \(\R^2\) that contain the vector \((2,2)\text{.}\)</article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>Show that a set with two vectors from \(\R^3\) can not span \(\R^3\text{.}\)</article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>Consider a map \(\pi_1\colon\R^n\to\R^n\) given by \((x_1,x_2,\ldots,x_n)\mapsto (x_1,0,\ldots,0)\text{.}\) Show that the image of \(\pi_1\) is a subspace of \(\R^n\text{.}\)</article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>Find all subspaces of the vector space \(\R\) over \(\R\text{.}\)</article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>Determine whether \((8,-2,-7)\in\R^3\) is a linear combination of the vectors \((1,1,1), (-2,0,1), (-1,3,5)\in\R^3\text{.}\) Here we consider \(\R^3\) as vector space over \(\R\text{.}\)</article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>Consider a vector space \(M_{2\times 2}(F)\) of \(2\times 2\) matrices over a field \(F\text{.}\) Show that the span of<div class="displaymath">
+<article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>Let \(\ell\) be a line passing through the origin in \(\R^2\text{.}\) Determine for which vectors \(v\in\R^2\text{,}\) the subset \(v+\ell=\{v+x:x\in\ell\}\) is a subspace of \(\R^2\text{.}\) Think geometrically.</article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>Find all subspaces in \(\R^2\) that contain the vector \((2,2)\text{.}\)</article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>Show that a set with two vectors from \(\R^3\) can not span \(\R^3\text{.}\)</article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>Consider a map \(\pi_1\colon\R^n\to\R^n\) given by \((x_1,x_2,\ldots,x_n)\mapsto (x_1,0,\ldots,0)\text{.}\) Show that the image of \(\pi_1\) is a subspace of \(\R^n\text{.}\)</article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>Find all subspaces of the vector space \(\R\) over \(\R\text{.}\)</article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>Determine whether \((8,-2,-7)\in\R^3\) is a linear combination of the vectors \((1,1,1), (-2,0,1), (-1,3,5)\in\R^3\text{.}\) Here we consider \(\R^3\) as a vector space over \(\R\text{.}\)</article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>Consider a vector space \(M_{2\times 2}(F)\) of \(2\times 2\) matrices over a field \(F\text{.}\) Show that the span of<div class="displaymath">
 \begin{equation*}
 S=\bigg\{\begin{pmatrix}1\amp 0\\0\amp 0\end{pmatrix},\begin{pmatrix}0\amp 1\\0\amp 0\end{pmatrix},\begin{pmatrix}0\amp 0\\1\amp 0\end{pmatrix},\begin{pmatrix}0\amp 0\\0\amp 1\end{pmatrix}\bigg\}
 \end{equation*}
-</div>is \(M_{2\times 2}(F)\text{.}\)</article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>Let \(V\) be a vector space over a field \(F\text{,}\) and let \(S=\{v_1,v_2,v_3\}\subset V\text{.}\) Suppose that \(w=\alpha v_1+\beta v_2\) for some \(\alpha,\beta\in F\text{.}\) Is \(\langle S\rangle=\langle\{w,v_2,v_3\}\rangle\text{?}\)</article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>Show that a union \(W_1\cup W_2\) of subspaces of a vector space need not be a subspace of \(V\text{.}\)</article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>Let \(V\) be a nontrivial (i.e., \(V\neq\{0\}\)) vector space over an infinite field \(F\text{.}\) Show that \(V\) is not a union of a finite number of proper subspaces.</article><a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like">Suppose that \(V\) is a union of a finite number of proper subspaces \(W_i\text{,}\) \(V=W_1\cup W_2\cup\cdots\cup W_r\text{.}\) We may assume that \(W_1\not\subset W_2\cup W_3\cup\cdots\cup W_r\text{.}\) Choose \(w\in W_1\setminus(W_2\cup W_3\cup\cdots\cup W_r)\) and \(v\in V\setminus W_1\text{.}\) Consider the line through \(v\) and parallel to \(w\text{,}\) i.e., the set \(U=\{\alpha w+v:\alpha\in F\}\text{.}\) Show that \(U\) is an infinite set and that each \(W_i\) contains atmost one vector from \(U\text{.}\)</div></div></section></div></main>
+</div>is \(M_{2\times 2}(F)\text{.}\)</article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>Let \(V\) be a vector space over a field \(F\text{,}\) and let \(S=\{v_1,v_2,v_3\}\subset V\text{.}\) Suppose that \(w=\alpha v_1+\beta v_2\) for some \(\alpha,\beta\in F\text{.}\) Is \(\langle S\rangle=\langle\{w,v_2,v_3\}\rangle\text{?}\)</article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>Show that a union \(W_1\cup W_2\) of subspaces of a vector space need not be a subspace of \(V\text{.}\)</article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>Let \(V\) be a nontrivial (i.e., \(V\neq\{0\}\)) vector space over an infinite field \(F\text{.}\) Show that \(V\) is not a union of a finite number of proper subspaces.<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">Suppose that \(V\) is a union of a finite number of proper subspaces \(W_i\text{,}\) \(V=W_1\cup W_2\cup\cdots\cup W_r\text{.}\) We may assume that \(W_1\not\subset W_2\cup W_3\cup\cdots\cup W_r\text{.}\) Choose \(w\in W_1\setminus(W_2\cup W_3\cup\cdots\cup W_r)\) and \(v\in V\setminus W_1\text{.}\) Consider the line through \(v\) and parallel to \(w\text{,}\) i.e., the set \(U=\{\alpha w+v:\alpha\in F\}\text{.}\) Show that \(U\) is an infinite set and that each \(W_i\) contains at most one vector from \(U\text{.}\)</div></div>
+</div></article></section></div></main>
 </div>
 </body>
 </html>

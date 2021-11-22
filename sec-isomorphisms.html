@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T22:07:12+05:30       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Isomorphisms</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\GL{\mathrm{GL}}
+\def\End{\mathrm{End}}
+\def\Aut{\mathrm{Aut}}
+\def\Hom{\mathrm{Hom}}
+\def\Iso{\mathrm{Iso}}
+\def\GL{\mathrm{GL}}
+\def\ker{\mathrm{ker}}
+\def\Span{\mathrm{Span}}
+\def\tr{\mathrm{tr}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="Linear-Algebra.html"><span class="title">Linear Algebra:</span> <span class="subtitle">Companion notes</span></a></h1>
+<p class="byline">A. Soman</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ex-ordered-basis.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch-linear-transformations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-isomorphism-invertible-matrix.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ex-ordered-basis.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch-linear-transformations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-isomorphism-invertible-matrix.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Elt-row-operations.html" data-scroll="Elt-row-operations"><span class="codenumber">1</span> <span class="title">Elementary row operations</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1">Elementary row operations</a></li>
+<li><a href="Elt-row-exercises.html" data-scroll="Elt-row-exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="VS.html" data-scroll="VS"><span class="codenumber">2</span> <span class="title">Vector spaces</span></a><ul>
+<li><a href="vs-def.html" data-scroll="vs-def">Definition of a vector space</a></li>
+<li><a href="vs-examples.html" data-scroll="vs-examples">Examples of vector spaces</a></li>
+<li><a href="Ex-VS.html" data-scroll="Ex-VS">Exercises</a></li>
+<li><a href="linear-combination.html" data-scroll="linear-combination">Linear combination</a></li>
+<li><a href="subspace.html" data-scroll="subspace">Subspace of a vector space</a></li>
+<li><a href="Ex-subspace.html" data-scroll="Ex-subspace">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-Basis-Dim.html" data-scroll="ch-Basis-Dim"><span class="codenumber">3</span> <span class="title">Basis and dimension of a vector space</span></a><ul>
+<li><a href="sec-linear-dependence.html" data-scroll="sec-linear-dependence">Linearly independent vectors</a></li>
+<li><a href="ex-linear-dependence.html" data-scroll="ex-linear-dependence">Exercises</a></li>
+<li><a href="sec-basis-dim.html" data-scroll="sec-basis-dim">Basis and Dimension</a></li>
+<li><a href="sec-results-basis-dim.html" data-scroll="sec-results-basis-dim">Invariance of dimension</a></li>
+<li><a href="ex-basis-dim.html" data-scroll="ex-basis-dim">Exercises</a></li>
+<li><a href="sec-basis-examples.html" data-scroll="sec-basis-examples">Examples</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-linear-transformations.html" data-scroll="ch-linear-transformations"><span class="codenumber">4</span> <span class="title">Linear transformations</span></a><ul>
+<li><a href="sec-def-linear-transformation.html" data-scroll="sec-def-linear-transformation">Definition of linear transformation</a></li>
+<li><a href="sec-examples-linear-transformations.html" data-scroll="sec-examples-linear-transformations">Examples of linear transformations</a></li>
+<li><a href="ex-lin-trans.html" data-scroll="ex-lin-trans">Exercises</a></li>
+<li><a href="sec-ordered-basis-linear-trans.html" data-scroll="sec-ordered-basis-linear-trans">Ordered basis and linear maps</a></li>
+<li><a href="ex-ordered-basis.html" data-scroll="ex-ordered-basis">Exercises</a></li>
+<li><a href="sec-isomorphisms.html" data-scroll="sec-isomorphisms" class="active">Isomorphisms</a></li>
+<li><a href="sec-isomorphism-invertible-matrix.html" data-scroll="sec-isomorphism-invertible-matrix">Isomorphism and invertible matrix</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-isomorphisms"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.6</span> <span class="title">Isomorphisms</span>
+</h2>
+<section class="introduction" id="introduction-22">We define a notion of isomorphism of vector spaces. Isomorphic vector spaces will have the "same" vector space structures.</section><article class="definition definition-like" id="isomorphism"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.6.1</span><span class="period">.</span>
+</h6>
+<p id="p-55">Let \(T\colon V\to W\) be a linear transformation of vector spaces over a field \(F\text{.}\) We say that \(T\) is an <dfn class="terminology">isomorphism</dfn> (resp., <dfn class="terminology">\(F\)-isomorphism</dfn>) between \(V\) and \(W\) if \(T\) is bijective.</p>
+<p id="p-56">Vector spaces \(V_1\) and \(V_2\) are said to be <dfn class="terminology">isomorphic</dfn> if there is a bijective \(F\)-linear transformation from \(V\) onto \(W\text{.}\)</p>
+<p id="p-57">Isomorphic vector spaces \(V,W\) are denoted by \(V\simeq W\text{.}\) The set of all isomorphisms between \(V\) and \(W\) is denoted by \(\Iso_F(V,W)\text{.}\) We denote \(\Iso_F(V,V)\) by \(\Aut_F(V)\text{.}\)</p></article><article class="lemma theorem-like" id="linearity-of-inverse"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.6.2</span><span class="period">.</span>
+</h6>Let \(T\colon V\to W\) be a bijective \(F\)-linear transformation. The set-theoretic inverse of \(T\) is also an \(F\)-linear transformation.</article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-58">Let \(S\colon W\to V\) be the set-theoretic inverse of \(T\text{.}\) We need to show that for any \(\alpha,\beta\in W\) and any \(x,y\in W\text{,}\) \(S(\alpha x+\beta y)=\alpha S(x)+\beta S(y)\text{.}\)</p>
+<p id="p-59">Since \(T\) is bijective, there exists unique \(a,b\in V\) such that \(T(a)=x\) and \(T(b)=y\text{.}\) Further, the \(F\)-linearity and bijectivity of \(T\) implies that \(T(\alpha a)=\alpha T(a)=\alpha x\) and \(T(\beta b)=\beta T(b)=\beta y\text{.}\) Thus, we also get \(T(\alpha a+\beta b)=\alpha x+\beta y\text{.}\) Hence,</p>
+<div class="displaymath">
+\begin{align*}
+S(\alpha x+\beta y)\amp=S\big(T(\alpha a+\beta b)\big)\\
+\amp=\alpha a +\beta b\\
+\amp=\alpha S\big(T(a)\big)+\beta S\big(T(b)\big)\\
+\amp=\alpha S(x)+\beta S(y).
+\end{align*}
+</div></article></div>
+<article class="remark remark-like" id="remark-18"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.6.3</span><span class="period">.</span>
+</h6>In view of <a class="xref" data-knowl="./knowl/linearity-of-inverse.html" title="Lemma 4.6.2">Lemma 4.6.2</a>, an \(F\)-linear map \(T\colon V\to W\) is an \(F\)-isomorphism if and only if there exists an \(F\)-linear map \(S\colon W\to V\) such that \(T\circ S=1_W\) and \(S\circ T=1_V\text{.}\)</article><article class="lemma theorem-like" id="iso-implies-same-dim"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.6.4</span><span class="period">.</span>
+</h6>Let \(T\colon V\to W\) be an \(F\)-isomorphism. If \(\{v_1,v_2,\ldots,v_n\}\) is a basis of \(V\) then \(\{T(v_1),T(v_2),\ldots,T(v_n)\}\) is a basis of \(W\text{.}\) In particular, isomorphic vector spaces have the same dimension.</article><article class="exercise exercise-like" id="exercise-53"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-53"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.6.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-53"><article class="exercise exercise-like">A linear functional \(f\colon V\to F\) (see <a class="xref" data-knowl="./knowl/End-vs.html" title="Definition 4.1.6">Definition 4.1.6</a>) is an isomorphism if and only if \(V\simeq F\text{.}\)</article></div>
+<article class="lemma theorem-like" id="lemma-5"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.6.6</span><span class="period">.</span>
+</h6>Let \(\{v_1,v_2,\ldots,v_n\}\) and \(\{w_1,w_2,\ldots,w_n\}\) be bases of \(V\) and \(W\text{,}\) respectively. Consider the mapping \(T\colon V\to W\) such that \(v_i\mapsto w_i\text{.}\) Extend the map linearly on \(V\) (see <a class="xref" data-knowl="./knowl/extending-linearly.html" title="Remark 4.1.5: (Linear extension of a map)">Remark 4.1.5</a>). Then, the map \(T\) is an isomorphism.</article><article class="exercise exercise-like" id="row-column-space-iso"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-row-column-space-iso"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.6.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-row-column-space-iso"><article class="exercise exercise-like">Let \(V=F^n\) and \(W=M_{n\times 1}(F)\) be vector spaces over a field \(F\text{.}\) Let \(e_i=(\delta_{i1},\delta_{i2},\ldots,\delta_{in})\text{.}\) Consider ordered bases \(\mathfrak{B}_V=\{e_i:1\leq i\leq n\}\) and \(\mathfrak{B}_W=(e_i^t:1\leq i\leq n)\) of \(V\) and \(W\text{,}\) respectively. Then, linear transformation \(T\colon V\to W\) given by \(x\mapsto x^t\) is an \(F\)-isomorphism.</article></div>
+<article class="proposition theorem-like" id="iso-to-n-dim-vs"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.6.8</span><span class="period">.</span>
+</h6>Every finite-dimensional vector space over a field \(F\) of dimension \(n\) is isomorphic to \(F^n\text{.}\)</article><article class="hiddenproof" id="proof-5"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof">Let \(V\) be a vector space over \(F\text{,}\) and let \(\dim_FV=n &lt;\infty\text{.}\) Fix an ordered basis \((v_1,\ldots,v_n)\) for \(V\) and consider the standard ordered basis \((e_1,e_2,\ldots,e_n)\) for \(F^n\) (refer <a class="xref" data-knowl="./knowl/standard-basis.html" title="Example 3.6.1: (Standard basis of \(F^n\))">Example 3.6.1</a>). By <a class="xref" data-knowl="./knowl/unique-lin-combination.html" title="Exercise 3.5.11">Exercise 3.5.11</a>, for every \(v\in V\) there exists unique scalars \(\alpha_i\) such that \(v=\sum_i\alpha_iv_i\text{.}\) Thus, the map<div class="displaymath">
+\begin{equation*}
+T\colon V\to F^n\quad\text{given by}\quad \sum\alpha_iv_i\mapsto \sum\alpha_ie_i
+\end{equation*}
+</div>is well-defined. It is also easy to verify that  \(T\) is an \(F\)-isomorphism.</article></div>
+<article class="remark remark-like" id="remark-19"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.6.9</span><span class="period">.</span>
+</h6>Let \(A\) be a matrix representation of a linear transformation \(S\colon V\to W\) with respect to bases \(\mathfrak{B}_V\) and \(\mathfrak{B}_W\text{.}\) By <a class="xref" data-knowl="./knowl/iso-to-n-dim-vs.html" title="Proposition 4.6.8">Proposition 4.6.8</a>, there are \(F\)-isomorphisms<div class="displaymath">
+\begin{equation*}
+T_{\mathfrak{B}_V}\colon V\xrightarrow{\sim} F^n\quad\text{and}\quad T_{\mathfrak{B}_W}\colon W\xrightarrow{\sim} F^m.
+\end{equation*}
+</div>By <a class="xref" data-knowl="./knowl/row-column-space-iso.html" title="Checkpoint 4.6.7">Checkpoint 4.6.7</a> we have \(F\)-isomorphisms<div class="displaymath">
+\begin{equation*}
+_nT\colon F^n\xrightarrow{\sim} M_{n\times 1}(F)\quad\text{and}\quad _mT\colon F^m\xrightarrow{\sim} M_{m\times 1}(F).
+\end{equation*}
+</div>Consider the following composition of maps.<div class="displaymath">
+\begin{equation}
+V\xrightarrow{T_{\mathfrak{B}_V}}F^n\xrightarrow{_nT}M_{n\times 1}(F)\xrightarrow{L_A}M_{m\times 1}(F)\xrightarrow{_mT^{-1}}F^{m}\xrightarrow{T_{\mathfrak{B}_W}^{-1}}W\label{composition}\tag{4.3}
+\end{equation}
+</div>The map \(L_A\) is the left multiplication by the matrix \(A\) (see <a class="xref" data-knowl="./knowl/induced-by-matrix.html" title="Example 4.2.2: (Linear transformation induced by a matrix)">Example 4.2.2</a>). The composition above is denoted by \(\ell_A\text{.}\) Thus,<div class="displaymath">
+\begin{equation*}
+\ell_A=T_{\mathfrak{B}_W}^{-1}\circ{} _mT^{-1}\circ L_A\circ{} _nT\circ T_{\mathfrak{B}_V}.
+\end{equation*}
+</div>By eq. <a class="xref" data-knowl="./knowl/matrix-rep-coordinates.html" title="Equation 4.2">(4.2)</a> it follows that the given linear transformation \(S\) is the same as the composition transformation given in eq. <a class="xref" data-knowl="./knowl/composition.html" title="Equation 4.3">(4.3)</a>.</article><article class="remark remark-like" id="remark-20"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.6.10</span><span class="period">.</span>
+</h6>We observed earlier (<a class="xref" data-knowl="./knowl/End-as-ring.html" title="Remark 4.1.8">Remark 4.1.8</a>) that \(\End_F(V)\) is a ring. We denote the group of all units in \(\End_F(V)\) by \(\GL(V)\text{.}\) The group \(\GL(V)\) is called <dfn class="terminology">general linear group</dfn> of \(V\text{.}\) So, an element of \(\GL(V)\) is an \(F\)-isomorphism of \(V\) onto itself.</article></section></div></main>
+</div>
+</body>
+</html>

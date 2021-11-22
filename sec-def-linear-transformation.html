@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-22T22:07:11+05:30       *-->
+<!--*       on 2021-11-22T22:07:12+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Exercises</title>
+<title>Definition of linear transformation</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>window.MathJax = {
@@ -76,10 +76,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="vs-examples.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linear-combination.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch-linear-transformations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch-linear-transformations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-examples-linear-transformations.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="vs-examples.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="VS.html" title="Up">Up</a><a class="next-button button toolbar-item" href="linear-combination.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch-linear-transformations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch-linear-transformations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-examples-linear-transformations.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -100,7 +100,7 @@
 <a href="VS.html" data-scroll="VS"><span class="codenumber">2</span> <span class="title">Vector spaces</span></a><ul>
 <li><a href="vs-def.html" data-scroll="vs-def">Definition of a vector space</a></li>
 <li><a href="vs-examples.html" data-scroll="vs-examples">Examples of vector spaces</a></li>
-<li><a href="Ex-VS.html" data-scroll="Ex-VS" class="active">Exercises</a></li>
+<li><a href="Ex-VS.html" data-scroll="Ex-VS">Exercises</a></li>
 <li><a href="linear-combination.html" data-scroll="linear-combination">Linear combination</a></li>
 <li><a href="subspace.html" data-scroll="subspace">Subspace of a vector space</a></li>
 <li><a href="Ex-subspace.html" data-scroll="Ex-subspace">Exercises</a></li>
@@ -118,7 +118,7 @@
 </li>
 <li class="link">
 <a href="ch-linear-transformations.html" data-scroll="ch-linear-transformations"><span class="codenumber">4</span> <span class="title">Linear transformations</span></a><ul>
-<li><a href="sec-def-linear-transformation.html" data-scroll="sec-def-linear-transformation">Definition of linear transformation</a></li>
+<li><a href="sec-def-linear-transformation.html" data-scroll="sec-def-linear-transformation" class="active">Definition of linear transformation</a></li>
 <li><a href="sec-examples-linear-transformations.html" data-scroll="sec-examples-linear-transformations">Examples of linear transformations</a></li>
 <li><a href="ex-lin-trans.html" data-scroll="ex-lin-trans">Exercises</a></li>
 <li><a href="sec-ordered-basis-linear-trans.html" data-scroll="sec-ordered-basis-linear-trans">Ordered basis and linear maps</a></li>
@@ -129,26 +129,53 @@
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="exercises" id="Ex-VS"><h2 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">2.3</span> <span class="title">Exercises</span>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-def-linear-transformation"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Definition of linear transformation</span>
 </h2>
-<article class="exercise exercise-like" id="exercise-7"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>Show that the set \({\rm Seq(F)}\) of all sequences with values in a field \(F\) is a vector space under the componentwise addition<div class="displaymath">
+<section class="introduction" id="introduction-15"><p id="p-44">We begin with an example. Consider the map \(T\colon\R^2\to\R^2\) defined by \(T\big((x,y)\big)=(-y,x)\text{.}\) This is the anticlockwise rotation by \(90^0\) in \(\R^2\text{.}\) This map has following two properties.</p>
+<ol class="decimal">
+<li id="li-25"><p id="p-derived-li-25">For any \(v\in\R^2\) and any \(\alpha\in\R\) we have \(T(\alpha v)=\alpha T(v)\text{.}\)</p></li>
+<li id="li-26"><p id="p-derived-li-26">For any \(v,w\in\R^2\) we have \(T(v+w)=T(v)+T(w)\text{.}\)</p></li>
+</ol>
+<p class="continuation">The above two properties will be a part of the defining properties of linear transformations.</p>
+<p id="p-45">Let \(A=\begin{pmatrix}0\amp -1\\1\amp 0\end{pmatrix}\text{,}\) and define a map \(T_A\colon\R^2\to\R^2\) by</p>
+<div class="displaymath">
 \begin{equation*}
-(a_n)+(b_n)=(a_n+b_n)
+\begin{pmatrix}x\\y\end{pmatrix}\mapsto A\begin{pmatrix}x\\y\end{pmatrix}.
 \end{equation*}
-</div>and the scalar multiplication<div class="displaymath">
+</div>
+<p class="continuation">We see that \(T_A\) satisfies the above two properties as well. Moreover, \(T\) and \(T_A\) define the same map.</p></section><article class="definition definition-like" id="def-linear-transformation"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">(Linear Transformation).</span>
+</h6> Let \(V\) and \(W\) be vector spaces over a field \(F\text{.}\) A mapping \(T\colon V\to W\) is said to be a <em class="emphasis">linear transformation</em> or an <em class="emphasis">\(F\)-linear transformation</em> if for every \(\alpha\in F\) and any \(v,v_1,v_2\in V\) we have <ol class="decimal">
+<li id="li-27"><p id="p-derived-li-27">\(\displaystyle T(\alpha v)=\alpha T(v)\)</p></li>
+<li id="li-28"><p id="p-derived-li-28">\(T(v_1+v_2)=T(v_1)+T(v_2)\text{.}\)</p></li>
+</ol></article><article class="remark remark-like" id="remark-12"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
+</h6>A linear transformation (resp., \(F\)-linear transformation) is also called a linear map (resp., an \(F\)-linear map).</article><article class="exercise exercise-like" id="exercise-44"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-44"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-44"><article class="exercise exercise-like"><ol class="decimal">
+<li id="li-29"><p id="p-derived-li-29">Show that any linear transformation maps the zero vector to the zero vector.</p></li>
+<li id="li-30"><p id="p-derived-li-30">Let \(T\colon V\to W\) be a linear transformation. Show that for every \(v\in V\) and any \(\alpha_i\in F\)<div class="displaymath">
 \begin{equation*}
-\alpha\cdot(x_n)=(\alpha x_n)\quad\text{where } \alpha,x_n\in F\text{ for every } n.
+T(\sum\alpha_iv_i)=\sum\alpha_iT(v_i)\text{.}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-8"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>Show that the set \({\rm Seq_0(\R)}\) of all real-valued sequences converging to \(0\) is a vector space. Use the same operations defined in an earlier exercise.</article><article class="exercise exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>Show that the set \(\Q(\sqrt{2})=\{a+b\sqrt{2}:a,b\in\Q\}\) is a vector space over \(\Q\text{.}\) The addition is given by<div class="displaymath">
+</div></p></li>
+</ol></article></div>
+<article class="remark remark-like" id="remark-13"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
+</h6>The first condition in <a class="xref" data-knowl="./knowl/def-linear-transformation.html" title="Definition 4.1.1: (Linear Transformation)">Definition 4.1.1</a> could be considered as <em class="emphasis">commutativity</em> between scalars and the map \(T\) (this is elaborated in <a class="xref" data-knowl="./knowl/left-multiplication.html" title="Example 4.2.1: (Left multiplication by a scalar)">Example 4.2.1</a>). The second condition in <a class="xref" data-knowl="./knowl/def-linear-transformation.html" title="Definition 4.1.1: (Linear Transformation)">Definition 4.1.1</a> is a <em class="emphasis">group homomorphism</em> between groups \((V,+)\) and \((W,+)\text{.}\)</article><article class="remark remark-like" id="extending-linearly"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">(Linear extension of a map).</span>
+</h6> A linear transformation on a vector space is completely determined by its action on a basis. Indeed, if \(\{v_i\}\) is a basis of \(V\) and \(v\in V\) then \(v=\sum\alpha_iv_i\text{.}\) Using properties of linear transformation we have \(T(v)=\sum\alpha_iT(v_i)\text{.}\) This process is called <em class="emphasis">extending map linearly</em> on \(V\) or <em class="emphasis">linear extension</em> of the map.</article><article class="definition definition-like" id="End-vs"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span>
+</h6>The set of all \(F\)-linear mappings between vector spaces \(V\) and \(W\) over \(F\) is denoted by \(\Hom_F(V,W)\) or when the context is clear by \(\Hom(V,W)\text{.}\) We denote \(\Hom_F(V,V)\) by \(\End_F(V)\text{.}\) The set \(\Hom_F(V,F)\) is called the <dfn class="terminology">dual space</dfn> of \(V\text{,}\) and it is denoted by \(V^*\text{.}\) The dual space \(V^*\) is in fact a vector space over \(F\) (see <a class="xref" data-knowl="./knowl/Hom-as-vs.html" title="Remark 4.1.7">Remark 4.1.7</a>). An element of \(V^*\) is called a <dfn class="terminology">linear functional</dfn>.</article><article class="remark remark-like" id="Hom-as-vs"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span>
+</h6>Note that \(\Hom_F(V,W)\) is a vector space over \(F\text{.}\) The addition is given by \((T+S)(v)=T(v)+S(v)\text{.}\) The scalar multiplication is given by<div class="displaymath">
 \begin{equation*}
-(a+b\sqrt{2})+(c+d\sqrt{2})=(a+c)+(b+d)\sqrt{2}
+(\alpha T)(v)=\alpha\cdot T(v).
 \end{equation*}
-</div>and the scalar multiplication by<div class="displaymath">
-\begin{equation*}
-\alpha\cdot(a+b\sqrt{2})=\alpha a+\alpha b\sqrt{2} \quad\text{for }\alpha,a,b\in\Q.
-\end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>Let \(F\) be a field. Show that the set \(L=\{(a,a,\ldots,a)\in F^n:a\in F\}\) is a vector space over \(F\text{.}\)</article><article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>Show that the set \(V=\{(a,a+b)\in\R^2:a,b\in\R\}\) is a vector space over \(\R\text{.}\)</article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>Is the set \(C[0,1]\) of all real-valued continuous functions on \([0,1]\) a vector space over \(\Q\text{?}\) Justify your answer.</article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>Let \(P_1,P_2\) be two planes in \(\R^3\) passing through the origin \((0,0,0)\text{.}\) Is \(P_1\cap P_2\) a vector space over \(\R\text{?}\) Justify your answer.</article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>Is the set \(\{(a,b):a,b\in\R\text{ and }a,b\leq 0\}\) a vector space over \(\R\text{?}\) Justify your answer.</article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>The transpose of a matrix \(A\) is denoted by \(A^t\text{.}\) Is the set \({\rm Skew}_n(F)=\{A\in M_{n\times n}(F):A=-A^t\}\) a vector space over \(F\text{?}\) Justify your answer.</article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>For \(n\geq 1\text{,}\) is \(\GL_n(F)\) a vector space over \(F\text{?}\) Justify your answer.</article></section></div></main>
+</div></article><article class="remark remark-like" id="End-as-ring"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.1.8</span><span class="period">.</span>
+</h6>The vector space \(\End_F(V)\) is also a ring with unity if we take composition of functions as multiplicative operation and identity map as the unity.</article></section></div></main>
 </div>
 </body>
 </html>
